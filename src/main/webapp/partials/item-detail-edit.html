@@ -1,0 +1,144 @@
+<div class="phone-images">
+  <img ng-src="{{img}}"
+       class="phone"
+       ng-repeat="img in item.images"
+       ng-class="{active: mainImageUrl==img}"
+       ng-click="uploadImage()">
+</div>
+
+<h1 contenteditable="true" style="color:red;">{{item.name}}</h1>
+<p><b>Price:</b> &#36;<span contenteditable="true" style="color:red;">{{item.price}}</span></p>
+<p contenteditable="true" style="color:red;">{{item.description}}</p>
+
+<ul class="phone-thumbs">
+  <li ng-repeat="img in item.images">
+    <img ng-src="{{img}}" ng-click="setImage(img)">
+    <div ng-show="img.slice(0, 18) != 'img/phones/unknown'" ng-disabled="img.slice(0, 18) != 'img/phones/unknown'">
+    <p>{{img}}</p>
+    </div>
+    <input type="file" ng-disabled="img.slice(0, 18) != 'img/phones/unknown'" ng-show="img.slice(0, 18) == 'img/phones/unknown'">
+  </li>
+    <button ng-click="imageCount=imageCount+1;item.images.push('img/phones/unknown'.concat(imageCount));" ng-init="imageCount=0">+</button>
+    <button ng-click="item.images.pop();">-</button>       
+
+ <!--  
+ <div ng-controller="UploadController">
+  <form>
+        <input type="file" ng-file-select="onFileSelect($files)" >  
+ </form>  
+ </div>  
+   -->
+ 
+</ul>
+
+<ul class="specs">
+  <li>
+    <span>Availability and Networks</span>
+    <dl>
+      <dt>Availability</dt>
+      <dd contenteditable="true" style="color:red;" ng-repeat="availability in item.availability" >{{availability}}</dd>
+    </dl>
+    <button ng-click="availabilityCount=availabilityCount+1;item.availability.push('Network'.concat(availabilityCount));" ng-init="availabilityCount=0">+</button>
+    <button ng-click="item.availability.pop();">-</button>
+  </li>
+  <li>
+    <span>Battery</span>
+    <dl>
+      <dt>Type</dt>
+      <dd contenteditable="true" style="color:red;">{{item.battery.type}}</dd>
+      <dt>Talk Time</dt>
+      <dd contenteditable="true" style="color:red;">{{item.battery.talkTime}}</dd>
+      <dt>Standby time (max)</dt>
+      <dd contenteditable="true" style="color:red;">{{item.battery.standbyTime}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Storage and Memory</span>
+    <dl>
+      <dt>RAM</dt>
+      <dd contenteditable="true" style="color:red;">{{item.storage.ram}}</dd>
+      <dt>Internal Storage</dt>
+      <dd contenteditable="true" style="color:red;">{{item.storage.flash}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Connectivity</span>
+    <dl>
+      <dt>Network Support</dt>
+      <dd contenteditable="true" style="color:red;">{{item.connectivity.cell}}</dd>
+      <dt>WiFi</dt>
+      <dd contenteditable="true" style="color:red;">{{item.connectivity.wifi}}</dd>
+      <dt>Bluetooth</dt>
+      <dd contenteditable="true" style="color:red;">{{item.connectivity.bluetooth}}</dd>
+      <dt>Infrared</dt>
+      <dd ng-click="item.connectivity.infrared=!item.connectivity.infrared"  style="color:red;">{{item.connectivity.infrared | checkmark}}</dd>
+      <dt>GPS</dt>
+      <dd ng-click="item.connectivity.gps=!item.connectivity.gps" style="color:red;">{{item.connectivity.gps | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Android</span>
+    <dl>
+      <dt>OS Version</dt>
+      <dd contenteditable="true" style="color:red;">{{item.android.os}}</dd>
+      <dt>UI</dt>
+      <dd contenteditable="true" style="color:red;">{{item.android.ui}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Size and Weight</span>
+    <dl>
+      <dt>Dimensions</dt>
+      <dd contenteditable="true" style="color:red;" ng-repeat="dim in item.sizeAndWeight.dimensions">{{dim}}</dd>
+      <dt>Weight</dt>
+      <dd contenteditable="true" style="color:red;">{{item.sizeAndWeight.weight}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Display</span>
+    <dl>
+      <dt>Screen size</dt>
+      <dd contenteditable="true" style="color:red;">{{item.display.screenSize}}</dd>
+      <dt>Screen resolution</dt>
+      <dd contenteditable="true" style="color:red;">{{item.display.screenResolution}}</dd>
+      <dt>Touch screen</dt>
+      <dd ng-click="item.display.touchScreen=!item.display.touchScreen" style="color:red;">{{item.display.touchScreen | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Hardware</span>
+    <dl>
+      <dt>CPU</dt>
+      <dd contenteditable="true" style="color:red;">{{item.hardware.cpu}}</dd>
+      <dt>USB</dt>
+      <dd contenteditable="true" style="color:red;">{{item.hardware.usb}}</dd>
+      <dt>Audio / headphone jack</dt>
+      <dd contenteditable="true" style="color:red;">{{item.hardware.audioJack}}</dd>
+      <dt>FM Radio</dt>
+      <dd ng-click="item.hardware.fmRadio=!item.hardware.fmRadio" style="color:red;">{{item.hardware.fmRadio | checkmark}}</dd>
+      <dt>Accelerometer</dt>
+      <dd ng-click="item.hardware.accelerometer=!item.hardware.accelerometer" style="color:red;">{{item.hardware.accelerometer | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Camera</span>
+    <dl>
+      <dt>Primary</dt>
+      <dd contenteditable="true" style="color:red;">{{item.camera.primary}}</dd>
+      <dt>Features</dt>
+      <dd contenteditable="true" style="color:red;">{{item.camera.features.join(', ')}}</dd>
+    </dl>
+    <button ng-click="cameraFeatureCount=cameraFeatureCount+1;item.camera.features.push('Feature'.concat(cameraFeatureCount));" ng-init="cameraFeatureCount=0">+</button>
+    <button ng-click="item.camera.features.pop();">-</button>
+    
+  </li>
+  <li>
+    <span>Additional Features</span>
+    <dd contenteditable="true" style="color:red;">{{item.additionalFeatures}}</dd>
+  </li>
+</ul>
+
+
+<div style="text-align:center;">
+    <button class="btn btn-large btn-primary" type="button" ng-click="save();">Save</button>
+</div>

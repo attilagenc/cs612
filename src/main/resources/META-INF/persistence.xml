@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+   <persistence-unit name="aws-ds" transaction-type="RESOURCE_LOCAL">
+
+      <description>Persistence Unit</description>
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+<!-- This is where we tell JPA/Hibernate about our @Entity objects MySQLInnoDBDialect-->      
+	 <class>edu.herguan.cs612.termproject.model.Item</class>
+	 <class>edu.herguan.cs612.termproject.model.ItemDetails</class>
+
+      <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://a0.chskwhreehea.us-west-2.rds.amazonaws.com:3306/cs612" />
+            <property name="javax.persistence.jdbc.user" value="agenc" />
+            <property name="javax.persistence.jdbc.password" value="12345678" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+         <!-- 
+         <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+          -->   
+         <property name="hibernate.show_sql" value="false" />
+         <property name="hibernate.format_sql" value="true" />
+         <property name="hibernate.transaction.flush_before_completion" value="true" />
+         
+      </properties>
+   </persistence-unit>
+</persistence>
