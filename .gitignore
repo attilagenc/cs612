@@ -3,6 +3,8 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+/.project
 /.classpath
+/.settings/
 /target/
 /**/*.jar
