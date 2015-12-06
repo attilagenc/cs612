@@ -4,7 +4,7 @@
 
 # Online Shopping Web Application
 # Overview
-Our term project is a cloud-enabledi, scalable, mobile-ready, offline-storage, AngularJS powered online shopping web application. Our project utilizes Amazon Web Services infrastructure to provide necessary online shopping functionality.
+Our term project is a cloud-enabled, scalable, mobile-ready, offline-storage, AngularJS powered online shopping web application. Our project utilizes Amazon Web Services infrastructure to provide necessary online shopping functionality.
 
 Online deployments of the application can be accessed by:
 
@@ -63,9 +63,10 @@ Project uses a number of open source projects and technologies to work properly:
 * [Eclipse] - awesome IDE
 * [JAX-RS] - Java Rest Services
 * [Tomcat] - Tomcat Application Server
+* [MySQL] - The world's most popular open source database
 
 
-And of course source code is open to public [git-repo-url] [cs612]
+And of course source code is open to public [public repository] [repolink]
  on GitHub.
 
 ### Installation
@@ -102,6 +103,11 @@ GNU LESSER GENERAL PUBLIC LICENSE
    [git-repo-url]: <https:/github.com/attilagenc/cs612.git>
    [node.js]: <http://nodejs.org>
    [AngularJS]: <http://angularjs.org>
+   [repolink]: <https://github.com/attilagenc/cs612>
+   [git-repo-url]: <https://github.com/attilagenc/cs612.git>
+   [Eclipse]:<http://www.eclipse.org/>
+   [MySQL]:<https://www.mysql.com/>
+   [Tomcat]:<http://tomcat.apache.org/>
 
 
 
