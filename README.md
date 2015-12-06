@@ -57,7 +57,7 @@ This text you see here is *actually* written in Markdown!
 
 ### Tech
 
-Dillinger uses a number of open source projects and technologies to work properly:
+Project uses a number of open source projects and technologies to work properly:
 
 * [AngularJS] - HTML enhanced for web apps!
 * [Eclipse] - awesome IDE
@@ -77,7 +77,7 @@ $ mvn package
 ```
 
 ```sh
-$ git clone [cs612] cs612
+$ git clone [git-repo-url] cs612
 $ cd cs612
 $ mvn clean
 $ mvn package
@@ -99,13 +99,9 @@ GNU LESSER GENERAL PUBLIC LICENSE
 
    [http://agenc-cs612.elasticbeanstalk.com]: <http://agenc-cs612.elasticbeanstalk.com/>
    [http://agenc-termproject.elasticbeanstalk.com/]: <http://agenc-termproject.elasticbeanstalk.com/>
-   [git-repo-url]: <https://github.com/attilagenc/cs612.git>
+   [git-repo-url]: <https:/github.com/attilagenc/cs612.git>
    [node.js]: <http://nodejs.org>
    [AngularJS]: <http://angularjs.org>
 
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]:  <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
 
 
