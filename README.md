@@ -108,6 +108,7 @@ GNU LESSER GENERAL PUBLIC LICENSE
    [Eclipse]:<http://www.eclipse.org/>
    [MySQL]:<https://www.mysql.com/>
    [Tomcat]:<http://tomcat.apache.org/>
+   [JAX-RS]:<https://jax-rs-spec.java.net/>
 
 
 
