@@ -3,7 +3,7 @@
 
 
 # Online Shopping Web Application
-## Overview
+### Overview
 Our term project is a cloud-enabled, scalable, mobile-ready, offline-storage, AngularJS powered online shopping web application. Our project utilizes Amazon Web Services infrastructure to provide necessary online shopping functionality.
 
 Online deployments of the application can be accessed by:
@@ -35,7 +35,7 @@ Online Shopping Application will also provide administrative interface where use
 -  create new entry for product catalog
 -  edit and update product catalog
 
-## Design Considerations/Requirements
+### Design Considerations/Requirements
 - To provide full working web application with both implementations for backend and  UI for functional requirements
  - Investigate current cloud computing service and resources, specifically PAAS offerings like Amazon BeanStalk
  - We emphasized infrastructure related development over application development
@@ -43,7 +43,7 @@ Online Shopping Application will also provide administrative interface where use
  - Implementing a load generator
  - Implementing fault simulation
 
-## Architecture
+### Architecture
 ![alt tag](https://raw.github.com/attilagenc/cs612/master/img/architecture.png)
 
 
