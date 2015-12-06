@@ -14,7 +14,7 @@ Online deployments of the application can be accessed by:
 
 The purpose of the project is
  - To implement a full web application with working backend and front end
- - Explore a PAAS platform (Amazon Beanstalk)
+ - Explore a PAAS platform (**Amazon Beanstalk**)
  - Utilize services provided to learn more about how to implement a web application that is:
     - scalable
     - Reliable
@@ -24,7 +24,7 @@ The purpose of the project is
     - Constant monitoring
     - Restore and failover solutions in case of fault
 
-## Project Requirements
+### Project Requirements
 Online Shopping Application will enable Users (Shoppers) to:
 -  browse products
 -  search  products
@@ -45,9 +45,6 @@ Online Shopping Application will also provide administrative interface where use
 
 ### Architecture
 ![alt tag](https://raw.github.com/attilagenc/cs612/master/img/architecture.png)
-
-
-> Some italic
 
 
 This text you see here is *actually* written in Markdown! 
@@ -93,7 +90,6 @@ License
 GNU LESSER GENERAL PUBLIC LICENSE
 
 
-**Free Software, Hell Yeah!**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
